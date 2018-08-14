@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col, Button, Divider } from 'antd';
+import { Layout, Row, Col, Button } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import { withRouter } from "react-router-dom";
 import 'rc-texty/assets/index.css';
