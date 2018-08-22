@@ -1,16 +1,11 @@
 import React from 'react';
 import { Layout, Row, Col, Button, Divider } from 'antd';
 import {withRouter} from "react-router-dom";
-import 'rc-texty/assets/index.css';
 import styles from './PageComponent.css';
 
 const { Footer } = Layout;
 
 class OptionComponent extends React.Component {
-  constructor(props){
-    super(props);
-  }
-
   buttonHandle = (dest, e) => {
     e.preventDefault();
     this.setState({duration: 500, interval: 0});
@@ -35,15 +30,18 @@ class OptionComponent extends React.Component {
             >
               <Col
                 span={24}
-                style={{ textAlign: "center", marginBottom: "10px" }}
-              >
-                <Divider>this.props.optionTitle</Divider>
+                style={{ textAlign: "center" }}
+              >            
+                {this.props.hasOptionHeader === "true" ? [
+                  <Divider>{this.props.optionTitle}</Divider>
+                ]:null}
                 {
-                  this.props.options.map((item, index) => {
+                  this.props.options.map((item) => {
                     return(
                       <Button
                         type="dashed"
-                        key={index}
+                        style={{ textAlign: this.props.optionAlign }}
+                        key={"dest_" + item.dest}
                         className={styles.options}
                         onClick={this.buttonHandle.bind(this, item.dest)}
                       >

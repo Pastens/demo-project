@@ -1,38 +1,65 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
-import IndexPage from './routes/IndexPage';
-import SecondPageOne from './routes/SecondPageOne';
-import SecondPageTwo from './routes/SecondPageTwo';
-import SecondPageThree from './routes/SecondPageThree';
-import ThirdPageOne from './routes/ThirdPageOne';
-import ThirdPageTwo from './routes/ThirdPageTwo';
-import FourthPageOne from './routes/FourthPageOne';
-import FifthPageOne from './routes/FifthPageOne';
-import FifthPageTwo from './routes/FifthPageTwo';
-import SixthPageOne from './routes/SixthPageOne';
-import SixthPageTwo from './routes/SixthPageTwo';
+import IntroPage from './routes/IntroPage';
+import SelectPage from './routes/SelectPage';
+
+import Role1Step1Page from './routes/Role1Step1Page';
+import Role1Step2Page from './routes/Role1Step2Page';
+import Role1Step3Page from './routes/Role1Step3Page';
+import Role1Step41Page from './routes/Role1Step41Page';
+import Role1Step42Page from './routes/Role1Step42Page';
+import Role1Step51Page from './routes/Role1Step51Page';
+import Role1Step52Page from './routes/Role1Step52Page';
+import Role1Step53Page from './routes/Role1Step53Page';
+import Role1Step54Page from './routes/Role1Step54Page';
+
+import Role2Step1Page from './routes/Role2Step1Page';
+import Role2Step2Page from './routes/Role2Step2Page';
+import Role2Step3Page from './routes/Role2Step3Page';
+import Role2Step4Page from './routes/Role2Step4Page';
+import Role2Step51Page from './routes/Role2Step51Page';
+import Role2Step52Page from './routes/Role2Step52Page';
+
+import Role3Step1Page from './routes/Role3Step1Page';
+import Role3Step2Page from './routes/Role3Step2Page';
+import Role3Step3Page from './routes/Role3Step3Page';
+import Role3Step4Page from './routes/Role3Step4Page';
+import Role3Step5Page from './routes/Role3Step5Page';
+
+import BeforeFinalPage from './routes/BeforeFinalPage';
 import FinalPage from './routes/FinalPage';
 
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/" exact component={IndexPage} />
-        <Route path="/2-1" exact component={SecondPageOne} />
-        <Route path="/2-2" exact component={SecondPageTwo} />
-        <Route path="/2-3" exact component={SecondPageThree} />
+        <Route path="/" exact component={IntroPage} />
+        <Route path="/select" exact component={SelectPage} />
 
-        <Route path="/3-1" exact component={ThirdPageOne} />
-        <Route path="/3-2" exact component={ThirdPageTwo} />
+        <Route path="/role1" exact component={Role1Step1Page} />
+        <Route path="/meeting" exact component={Role1Step2Page} />
+        <Route path="/relation" exact component={Role1Step3Page} />
+        <Route path="/meetingArrange" exact component={Role1Step41Page} />
+        <Route path="/awardArrange" exact component={Role1Step42Page} />
+        <Route path="/arrangeFail" exact component={Role1Step51Page} />
+        <Route path="/efficientFail" exact component={Role1Step52Page} />
+        <Route path="/askElder" exact component={Role1Step53Page} />
+        <Route path="/askFamily" exact component={Role1Step54Page} />
 
+        <Route path="/role2" exact component={Role2Step1Page} />
+        <Route path="/department" exact component={Role2Step2Page} />
+        <Route path="/tracing" exact component={Role2Step3Page} />
+        <Route path="/tools" exact component={Role2Step4Page} />
+        <Route path="/cost" exact component={Role2Step51Page} />
+        <Route path="/prof" exact component={Role2Step52Page} />
 
-        <Route path="/4-1" exact component={FourthPageOne} />
+        <Route path="/role3" exact component={Role3Step1Page} />
+        <Route path="/affairs" exact component={Role3Step2Page} />
+        <Route path="/group" exact component={Role3Step3Page} />
+        <Route path="/meetingtask" exact component={Role3Step4Page} />
+        <Route path="/learning" exact component={Role3Step5Page} />
 
-        <Route path="/5-1" exact component={FifthPageOne} />
-        <Route path="/5-2" exact component={FifthPageTwo} />
-
-        <Route path="/6-1" exact component={SixthPageOne} />
-        <Route path="/6-2" exact component={SixthPageTwo} />
+        <Route path="/beforefinal" exact component={BeforeFinalPage} />
         <Route path="/final" exact component={FinalPage} />
       </Switch>
     </Router>

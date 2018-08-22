@@ -5,18 +5,21 @@
 
 .footer{
   background-color: rgba(233, 233, 231, 0.8);
-  min-height: 200px;
   padding: 0 10px;
+}
+
+.content{
+  font-size: 1.2rem;
 }
 
 .background {
   position: absolute;
   height: calc(100vh);
   width: calc(100vw);
-  filter: blur(1px);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
+  background-size: cover;
   z-index: -10;
 }
 .normal {
