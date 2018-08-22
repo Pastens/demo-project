@@ -12,18 +12,17 @@ class SelectPage extends React.Component {
     ];
     const content = [
       "是羡慕成熟后的沉静内敛还是追忆年少时的意气风发，是渴望运筹帷幄后的波澜不惊还是怀念少不更事时的小鹿乱撞。",
-      "此时的你，如果重新选择不一样的华秘人生……"
+      "此时的你，如果重新选择不一样的华秘人生，你会选择……"
     ];
-    const optionTitle = "你会选择"
     return(
       <PageComponent
-        backgroundUrl='select'
+        backgroundUrl='背景2'
         enableClick='false'
         content={content}
         nextPage=''
         hasOptions="true"
-        hasOptionHeader="true"
-        optionTitle={optionTitle}
+        hasOptionHeader="false"
+        contentAlign="bottom"
         optionHeight='18rem'
         optionAlign="center"
         options={options}

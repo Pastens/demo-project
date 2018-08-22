@@ -13,10 +13,12 @@ class BeforeFinalPage extends React.Component {
     ];
     return(
       <PageComponent
-        backgroundUrl='intro'
+        backgroundUrl='背景最后'
         enableClick='true'
         content={content}
         nextPage='/final'
+        contentAlign="middle"
+        contentPadding="10rem 0 0 0"
         hasOptions="false"
         hasOptionHeader="true"
         optionTitle=""

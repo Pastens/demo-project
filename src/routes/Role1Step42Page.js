@@ -15,10 +15,11 @@ class Role1Step42Page extends React.Component {
     const optionTitle = ""
     return(
       <PageComponent
-        backgroundUrl='meeting'
+        backgroundUrl='背景6'
         enableClick='false'
         content={content}
         nextPage=''
+        contentAlign="bottom"
         hasOptions="true"
         hasOptionHeader="false"
         optionTitle={optionTitle}

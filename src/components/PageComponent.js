@@ -20,6 +20,8 @@ class PageComponent extends React.Component {
       options:          this.props.options,             // 选项数组
       nextPage:         this.props.nextPage,            // 下一页url
       contentHeight:    'calc(100vh - '+this.props.optionHeight+')',
+      contentPadding:   this.props.contentPadding ? this.props.contentPadding : "",
+      contentAlign:     this.props.contentAlign ? this.props.contentAlign : "middle",
       optionHeight:     this.props.optionHeight,        // 选项窗口高度
       optionTitle:      this.props.optionTitle,         // 选项上方提示语     
       optionAlign:      this.props.optionAlign,         // 选项上方提示语     
@@ -70,13 +72,13 @@ class PageComponent extends React.Component {
                 <Row
                   type="flex"
                   justify="center"
-                  align="middle"
+                  align={ this.state.contentAlign }
                   style={{ minHeight: this.state.contentHeight }}
                 >
                   <Col
                     span={22}
                     offset={1}
-                    style={{ textAlign: "left", color: "#fff", textShadow: "0px 0px 10px #000" }}
+                    style={{ textAlign: "left", color: "#fff", textShadow: "0px 0px 10px #000", padding: this.state.contentPadding  }}
                   >
                     {
                       this.props.content.map((item, index) => {

@@ -13,12 +13,14 @@ class IndexPage extends React.Component {
     ];
     return(
       <PageComponent
-        backgroundUrl='intro'
+        backgroundUrl='背景1'
         enableClick='true'
         content={content}
         nextPage='/select'
         hasOptions="false"
         hasOptionHeader="true"
+        contentPadding="0 0 10rem 0"
+        contentAlign="bottom"
         optionTitle=""
         optionHeight='0px'
         options={options}

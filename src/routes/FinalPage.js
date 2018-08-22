@@ -33,7 +33,7 @@ class FinalPage extends React.Component {
 
   render() {
     const backgroundStyle = {
-      backgroundImage: `url(${require('../assets/background.jpeg')})`
+      backgroundImage: `url(${require('../assets/背景最后.jpg')})`
     }
     return(
       <div>
@@ -57,8 +57,8 @@ class FinalPage extends React.Component {
                 <Row
                   type="flex"
                   justify="center"
-                  align="middle"
-                  style={{ minHeight: "calc(100vh - 10rem)" }}
+                  align="bottom"
+                  style={{ minHeight: "calc(100vh - 12rem)", padding: "0 0 10rem 0" }}
                 >
                   <Col
                     span={22}
@@ -90,7 +90,7 @@ class FinalPage extends React.Component {
                   type="flex"
                   justify="center"
                   align="middle"
-                  style={{minHeight: "10rem"}}
+                  style={{minHeight: "12rem"}}
                 >
                   <Col
                     span={24}
