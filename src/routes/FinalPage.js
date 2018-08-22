@@ -16,7 +16,8 @@ class FinalPage extends React.Component {
     this.state = {
       show: true,
       backgroundName: "",
-      result: global.result[this.resultIndex],
+      // result: global.result[this.resultIndex],
+      result: global.result[4],
       animDuration:     2000,
       animInterval:     2000,
       animType:         "alpha",
@@ -58,15 +59,14 @@ class FinalPage extends React.Component {
                   type="flex"
                   justify="center"
                   align="bottom"
-                  style={{ minHeight: "calc(100vh - 12rem)", padding: "0 0 10rem 0" }}
+                  style={{ minHeight: "calc(100vh - 8rem)", padding: "0" }}
                 >
                   <Col
                     span={22}
-                    offset={1}
                     style={{ textAlign: "center", color: "#fff", textShadow: "0px 0px 10px #000" }}
                   >
                     <h1
-                      style={{ textAlign: "center", color: "#fff", textShadow: "0px 0px 10px #000" }}
+                      style={{ textAlign: "center", color: "#fff", fontSize: "1.4em", textShadow: "0px 0px 10px #000" }}
                     >{this.state.result.title}</h1>
                     {this.state.result.content.map((item, index) => {
                       return(
@@ -90,7 +90,7 @@ class FinalPage extends React.Component {
                   type="flex"
                   justify="center"
                   align="middle"
-                  style={{minHeight: "12rem"}}
+                  style={{minHeight: "8rem"}}
                 >
                   <Col
                     span={24}

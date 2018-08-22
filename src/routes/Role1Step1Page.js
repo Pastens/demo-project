@@ -21,11 +21,10 @@ class Role1Step1Page extends React.Component {
         content={content}
         nextPage=''
         hasOptions="true"
-        contentAlign="top"
-        contentPadding="10rem 10rem 0 0"
+        contentAlign="bottom"
         hasOptionHeader="false"
         optionTitle={optionTitle}
-        optionHeight='14rem'
+        optionHeight='12rem'
         optionAlign="left"
         options={options}
       />

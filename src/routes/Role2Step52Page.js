@@ -23,7 +23,7 @@ class Role2Step52Page extends React.Component {
         contentAlign="bottom"
         hasOptionHeader="false"
         optionTitle={optionTitle}
-        optionHeight='18rem'
+        optionHeight='12rem'
         optionAlign="left"
         options={options}
       />

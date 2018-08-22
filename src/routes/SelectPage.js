@@ -23,7 +23,7 @@ class SelectPage extends React.Component {
         hasOptions="true"
         hasOptionHeader="false"
         contentAlign="bottom"
-        optionHeight='18rem'
+        optionHeight='12rem'
         optionAlign="center"
         options={options}
       />

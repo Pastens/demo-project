@@ -37,7 +37,7 @@ class PageComponent extends React.Component {
 
   clickHandle = (e) => {
     if(this.state.hasOptions === "false" && this.state.enableClick === "true") {
-      this.setState({duration: 800, interval: 0});
+      this.setState({animDuration: 800, animInterval: 0});
       this.setState({show: false});
       setTimeout(() => {
         this.props.history.push(this.state.nextPage);
@@ -77,7 +77,6 @@ class PageComponent extends React.Component {
                 >
                   <Col
                     span={22}
-                    offset={1}
                     style={{ textAlign: "left", color: "#fff", textShadow: "0px 0px 10px #000", padding: this.state.contentPadding  }}
                   >
                     {
