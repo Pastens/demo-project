@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +17,60 @@
   <meta name="x5-page-mode" content="app">
   <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-  <audio autoplay="autoplay" loop>
+  <audio id="bgm" autoplay="autoplay" loop preload>
+    该浏览器不支持audio属性
     <source src="./bgm.mp3" type="audio/mpeg">
   </audio>
   <div id="root"></div>
   <script src="index.js"></script>
+  <script>
+    (function () {
+      function log(info) {
+        console.log(info);
+        // alert(info);
+      }
+      function forceSafariPlayAudio() {
+        autoEI.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
+        autoEI.play(); // iOS 7/8 仅需要 play 一下
+      }
+      var autoEI = document.getElementById('bgm');
+      autoEI.addEventListener('loadstart', function () {
+        log('loadstart');
+      }, false);
+      autoEI.addEventListener('loadeddata', function () {
+        log('loadeddata');
+      }, false);
+      autoEI.addEventListener('loadedmetadata', function () {
+        log('loadedmetadata');
+      }, false);
+      autoEI.addEventListener('canplay', function () {
+        log('canplay');
+      }, false);
+      autoEI.addEventListener('play', function () {
+        log('play');
+        // 当 audio 能够播放后, 移除这个事件
+        window.removeEventListener('touchstart', forceSafariPlayAudio, false);
+      }, false);
+      autoEI.addEventListener('playing', function () {
+        log('playing');
+      }, false);
+      autoEI.addEventListener('pause', function () {
+        log('pause');
+      }, false);
+      document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+          autoEI.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
+          autoEI.play();
+          document.addEventListener("WeixinJSBridgeReady", function () {
+            autoEI.play();
+          }, false);
+        }
+        audioAutoPlay();
+      });
+    })();
+  </script>
 </body>
+
 </html>
