@@ -10,8 +10,6 @@ class Role3Step1Page extends React.Component {
       {dest: '/affairs', content: "当面表示感谢，约他一起去喝咖啡度过愉快的下午茶时光"}
     ];
     const content = [
-      "你那么美，在工作生活中总是闪闪惹人爱。",
-      "可是仙女本仙也有烦恼，为主管的各种会议协调会议室经常让你很头疼。",
       "隔壁部门一位长相似吴彦祖学识如高晓松的GG经常帮你抢会议室，对你非常照顾。",
       "你决定："
     ];

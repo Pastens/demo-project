@@ -17,9 +17,10 @@ class BeforeFinalPage extends React.Component {
         enableClick='true'
         content={content}
         nextPage='/final'
-        contentAlign="middle"
-        contentPadding="10rem 0 0 0"
+        contentAlign="bottom"
+        contentPadding="0 0 10rem 0"
         hasOptions="false"
+        hasNextPage="true"
         hasOptionHeader="true"
         optionTitle=""
         optionHeight='0px'

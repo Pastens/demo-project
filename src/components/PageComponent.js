@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Row, Col } from 'antd';
+import { Layout, Row, Col, Icon } from 'antd';
 import OptionComponent from './OptionComponent';
 import QueueAnim from 'rc-queue-anim';
 import {withRouter} from "react-router-dom";
@@ -24,7 +24,8 @@ class PageComponent extends React.Component {
       contentAlign:     this.props.contentAlign ? this.props.contentAlign : "middle",
       optionHeight:     this.props.optionHeight,        // 选项窗口高度
       optionTitle:      this.props.optionTitle,         // 选项上方提示语     
-      optionAlign:      this.props.optionAlign,         // 选项上方提示语     
+      optionAlign:      this.props.optionAlign,         // 选项上方提示语  
+      hasNextPage:      this.props.hasNextPage ? this.props.hasNextPage : false,   
       animDuration:     2000,
       animInterval:     2000,
       animType:         "alpha",
@@ -84,6 +85,9 @@ class PageComponent extends React.Component {
                         return <p className={styles.content} key={"content-"+index}>{item}</p>
                       })
                     }
+                    {this.state.hasNextPage === "true" ? [
+                      <p className={styles.hint}>点击屏幕进入下一页<Icon type="right" /></p>
+                    ]:null}
                   </Col>
                 </Row>
               </Content>,

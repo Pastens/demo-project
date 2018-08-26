@@ -6,7 +6,7 @@ import 'rc-texty/assets/index.css';
 class Role2Step4Page extends React.Component {
   render() {
     const options = [
-      {dest: '/cost', content: "兢兢业业，职业化的态度是优质交付的保障，工作本来就需要付出时间和精力，很正常"},
+      {dest: '/cost_pre', content: "兢兢业业，职业化的态度是优质交付的保障，工作本来就需要付出时间和精力，很正常"},
       {dest: '/prof', content: "对不合理的需求SAY NO,识别低效点，推动周边一起优化"}
     ];
     const content = [

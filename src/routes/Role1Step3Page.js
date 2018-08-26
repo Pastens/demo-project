@@ -10,7 +10,6 @@ class Role1Step3Page extends React.Component {
       {dest: '/awardArrange', content: "这次就算了，把机会留给其他MM吧，我最近正好在专注搞部门的颁奖晚会"}
     ];
     const content = [
-      "作为总裁专业可信赖的助手，日常工作让你充满了满满的成就感，但也有一丝丝觉得平淡。",
       "下午你收到秘书体系征集报名支撑公司S大会的邮件，你该如何选择?",
       "（慎选，因为这个选择将决定你接下来的命运）",
     ];

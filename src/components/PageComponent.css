@@ -12,6 +12,14 @@
   font-size: 1.2rem;
 }
 
+.hint{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: right;
+  font-size: 0.6rem;
+}
+
 .background {
   position: absolute;
   height: calc(100vh);

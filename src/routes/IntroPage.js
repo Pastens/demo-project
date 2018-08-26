@@ -21,6 +21,7 @@ class IndexPage extends React.Component {
         hasOptionHeader="true"
         contentPadding="0 0 8rem 0"
         contentAlign="bottom"
+        hasNextPage="true"
         optionTitle=""
         optionHeight='0px'
         options={options}

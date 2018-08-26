@@ -36,12 +36,12 @@ class OptionComponent extends React.Component {
                   <Divider>{this.props.optionTitle}</Divider>
                 ]:null}
                 {
-                  this.props.options.map((item) => {
+                  this.props.options.map((item, index) => {
                     return(
                       <Button
                         type="dashed"
                         style={{ textAlign: this.props.optionAlign }}
-                        key={"dest_" + item.dest}
+                        key={`dest_` + item.dest+`_`+index}
                         className={styles.options}
                         onClick={this.buttonHandle.bind(this, item.dest)}
                       >

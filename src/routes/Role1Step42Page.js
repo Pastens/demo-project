@@ -6,8 +6,8 @@ import 'rc-texty/assets/index.css';
 class Role1Step42Page extends React.Component {
   render() {
     const options = [
-      {dest: '/askElder', content: "找秘书科的前辈请教，让她们帮忙出谋划策解决问题。"},
-      {dest: '/askFamily', content: "给家人朋友倾诉，排解压力调整状态。"}
+      {dest: '/askElder_pre', content: "找秘书科的前辈请教，让她们帮忙出谋划策解决问题。"},
+      {dest: '/askFamily_pre', content: "给家人朋友倾诉，排解压力调整状态。"}
     ];
     const content = [
       "颁奖晚会的策划组织千头万绪，挑战非常大，你感到压力很大，你选择：",

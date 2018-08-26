@@ -16,6 +16,17 @@
   z-index: -10;
 }
 
+.backgroundResult {
+  position: absolute;
+  height: calc(100vh);
+  width: calc(100vw);
+  /* filter: blur(2px); */
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+
+}
 
 .options {
   border-color: #323232;
